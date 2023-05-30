@@ -9,8 +9,7 @@ FROM room LEFT JOIN seat
 	ON room.id = seat.room_id;
     
 -- Show film without any booking
-SELECT * 
--- DISTINCT film.name
+SELECT DISTINCT film.name
 FROM screening
 	RIGHT JOIN booking ON screening.id = booking.screening_id
     RIGHT JOIN film ON screening.film_id = film.id
